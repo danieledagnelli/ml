@@ -11,3 +11,18 @@ fun transp ([]::rows)   = []
 
 fun dotprod ([], []) = 0.0
   | dotprod (x::xs, y::ys) = x*y + dotprod (xs, ys);
+
+
+fun rowprod (row, [])   = []
+  | rowprod (row, col::cols) =
+    dotprod (row, col) :: rowprod (row, cols);
+
+
+fun rowlistprod ([], cols)      = []
+  | rowlistprod (row::rows, cols) =
+    rowprod (row, cols) :: rowlistprod (rows, cols);
+
+
+fun matprod (rowsA, rowsB) = rowlistprod(rowsA, transp rowsB);
+
+
