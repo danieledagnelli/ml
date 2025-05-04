@@ -1,0 +1,30 @@
+fun upper(c) = chr(ord(c)-32);
+upper(#"a");
+upper(#"b");
+
+fun square (x:real) = x*x;
+
+val pi = 3.14159;
+val radius = 4.0;
+
+pi*square(radius);
+
+
+fun max3 (a:real, b, c) =
+    if a>b then
+	if a>c then a
+	else c
+    else
+	if b>c then b
+	else c;
+(* ml uses one parameter, but it can be a touple *)
+val t = (1.0, 2.0, 3.0);
+max3 t;
+
+(* *)
+
+val x = 3;
+fun addx() = a+x;
+val x = 10;
+addx(2);
+

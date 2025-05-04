@@ -23,3 +23,10 @@ fun inter ([], ys)      = []
 infix subs;
 fun ([] subs ys)        = true
   |  ((x::xs) subs ys)   = (x mem ys) andalso (xs subs ys);
+
+infix seq
+fun (xs seq ys) = (xs subs ys) andalso (ys subs xs);
+
+fun powset ([], base) = [base]
+  | powset (x::xs, base)        = 
+    powset (xs, base) @ powset (xs, x::base);
