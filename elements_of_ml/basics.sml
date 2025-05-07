@@ -80,11 +80,15 @@ third_character_of_string("abcdefg");
 
 
 (* cycle list once *)
-(* fun cycle_list_once (l) = tl(l) ;
+
+fun cycle_list_once (l) = tl(l) @ [hd(l)];
+
+				      
+
+print("cycle list once\n");
 
 
 cycle_list_once([1, 2, 3]);
- *)
 
 fun min_max (a: int, b:int, c:int): int * int =
     
@@ -146,3 +150,50 @@ val b = 3;
 fun g(a) = a+b;
 
 f(4);
+
+fun reverse(L) =
+    if L = nil then nil
+    else
+	reverse(tl(L)) @ [hd(L)];
+
+reverse[1, 2, 3];
+
+(* Non-linear rerucrsion *)
+
+(* n chose m *)
+fun comb (n, m) = (* assumes 0 <= m <= n *)
+    if m=0 orelse n=m then 1
+    else comb (n-1, m) + comb
+			     (n-1, m-1);
+
+comb (4, 2);
+
+(* Mutual Recursion *)
+fun take(L) =
+    if L=nil then nil
+    else hd(L)::skip(tl(L))
+and
+skip (L) =
+if L=nil then nil
+else
+    take(tl(L));
+
+take ([1,2,3,4,5]);
+skip ([1,2,3,4,5]);
+skip(explode("longlist"));
+
+
+
+(* recursive functions *)
+fun factorial (x) =
+    if x=1 then 1
+    else
+	factorial (x-1) * x;
+
+factorial (4);
+factorial (5);
+factorial (6);
+
+
+(*fun cycle_l_times(L) =*)
+
