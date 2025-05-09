@@ -1,0 +1,1571 @@
+Standard ML of New Jersey [Version 110.99.7; 64-bit; December 28, 2024]
+- [opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:200.10 Warning: calling polyEqual
+val cycle_l_times = fn : ''a list -> ''a list
+val it = [3,5,2] : int list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:200.35 Error: syntax error: replacing  SEMICOLON with  RPAREN
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'a list
+val it = [3,5,2] : int list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'a list
+val it = [3,5,2] : int list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+val it = [3,5,2] : int list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+val it = [3,4,5,6,7,8,9,2] : int list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+val it = [3,4,5,6,7,8,9,2] : int list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:203.1-205.9 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: ''Z list
+  operand:         'Y[INT] * 'X[INT] list
+  in expression:
+    cycle_l_times (3,1 :: 2 :: 3 :: 4 :: 5 :: 6 :: 7 :: <exp> :: <exp>)
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:203.1-203.40 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: ''Z list
+  operand:         'Y[INT] * 'X[INT] list
+  in expression:
+    cycle_l_times (3,1 :: 2 :: 3 :: 4 :: 5 :: 6 :: 7 :: nil)
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:203.1-203.42 Warning: type vars not generalized because of
+   value restriction are instantiated to dummy types (X1,X2,...)
+val it = [] : ?.X1 list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'a list
+val it = [3,4,5,6,7,2,3,4,5,6,7,1,2,3,4,5,...] : int list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'a list
+val it = [4,5,6,7] : int list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:201.20-201.40 Error: operator and operand do not agree [circularity]
+  operator domain: 'Z list * 'Z list
+  operand:         'Z list * 'Z
+  in expression:
+    tl L @ hd L
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:201.41 Error: syntax error: replacing  SEMICOLON with  RPAREN
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:202.10 Error: syntax error: replacing  SEMICOLON with  RPAREN
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:207.1-208.31 Warning: type vars not generalized because of
+   value restriction are instantiated to dummy types (X1,X2,...)
+val it = [] : ?.X1 list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:207.1-208.31 Warning: type vars not generalized because of
+   value restriction are instantiated to dummy types (X1,X2,...)
+val it = [] : ?.X1 list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:204.1-205.31 Warning: type vars not generalized because of
+   value restriction are instantiated to dummy types (X1,X2,...)
+val it = [] : ?.X1 list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:204.1-205.31 Warning: type vars not generalized because of
+   value restriction are instantiated to dummy types (X1,X2,...)
+val it = [] : ?.X1 list
+val it = () : unit
+- 
+[opening /Users/bidi/git/smlnj/elements_of_ml/basics.sml]
+val upper = fn : char -> char
+val it = #"A" : char
+val it = #"B" : char
+val square = fn : real -> real
+val pi = 3.14159 : real
+val radius = 4 : real
+val it = 50.26544 : real
+val max3 = fn : real * real * real -> real
+val t = (1,2,3) : real * real * real
+val it = 3 : real
+val x = 3 : int
+val addx = fn : int -> int
+val x = 10 : int
+val it = 5 : int
+val cubereal = fn : real -> real
+val it = 27 : real
+val smallest_3_ints = fn : int * int * int -> int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val it = 1 : int
+val return_third_element_of_list = fn : 'a list -> 'a
+val it = 3 : int
+val it = #"c" : char
+val reverse_touple_len_3 = fn : 'a * 'b * 'c -> 'c * 'b * 'a
+val it = (3,2,1) : int * int * int
+val it = (#"C",#"B",#"A") : char * char * char
+val third_character_of_string = fn : string -> char
+val it = #"c" : char
+val cycle_list_once = fn : 'a list -> 'a list
+cycle list once
+val it = () : unit
+val it = [2,3,1] : int list
+val min_max = fn : int * int * int -> int * int
+val it = (1,2) : int * int
+val ordered_three = fn : int * int * int -> int * int * int
+val it = (3,3,4) : int * int * int
+val it = (1,2,3) : int * int * int
+val it = (1,2,3) : int * int * int
+val round_tenth = fn : real -> real
+val it = 4.1 : real
+val it = 0.1 : real
+val it = 1 : real
+val it = 1.1 : real
+val delete_second_element = fn : 'a list -> 'a list
+val it = ["a","c","d","e"] : string list
+val it = [1,3,4,5,6] : int list
+val a = 2 : int
+val f = fn : int -> int
+val b = 3 : int
+val g = fn : int -> int
+val it = 8 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:156.10 Warning: calling polyEqual
+val reverse = fn : ''a list -> ''a list
+val it = [3,2,1] : int list
+val comb = fn : int * int -> int
+val it = 6 : int
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:178.5 Warning: calling polyEqual
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:174.9 Warning: calling polyEqual
+val take = fn : ''a list -> ''a list
+val skip = fn : ''a list -> ''a list
+val it = [1,3,5] : int list
+val it = [2,4] : int list
+val it = [#"o",#"g",#"i",#"t"] : char list
+val factorial = fn : int -> int
+val it = 24 : int
+val it = 120 : int
+val it = 720 : int
+val cycle_l_i_times = fn : int * 'a list -> 'b list
+/Users/bidi/git/smlnj/elements_of_ml/basics.sml:205.1-206.31 Warning: type vars not generalized because of
+   value restriction are instantiated to dummy types (X1,X2,...)
+val it = [] : ?.X1 list
+val it = () : unit
+- XOGGXOx

@@ -81,7 +81,8 @@ third_character_of_string("abcdefg");
 
 (* cycle list once *)
 
-fun cycle_list_once (l) = tl(l) @ [hd(l)];
+fun cycle_list_once (l) = tl(l) @
+			  [hd(l)];
 
 				      
 
@@ -195,5 +196,26 @@ factorial (5);
 factorial (6);
 
 
-(*fun cycle_l_times(L) =*)
+fun cycle_l_i_times(i, L) =
+    if i = 0 then L
+		      
+    else cycle_l_i_times(i-1, tl(L) @ [hd(L)
+			]);
+cycle_l_i_times
+    (3, [1, 2, 3, 4, 5, 6, 7]);
 
+cycle_l_i_times (5, [0, 1, 2, 3, 4, 5,6,7,8,9]);
+
+
+print ("TEST CONCAT\n");
+
+
+fun duplicate_each_element (L) =
+    if L = nil then nil
+    else [
+	hd(L)] @
+	 [hd(L)] @ duplicate_each_element(
+	     tl(L));
+
+duplicate_each_element ([1, 2, 3]);
+duplicate_each_element(explode("hello"));
