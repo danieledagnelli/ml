@@ -217,5 +217,117 @@ fun duplicate_each_element (L) =
 	 [hd(L)] @ duplicate_each_element(
 	     tl(L));
 
-duplicate_each_element ([1, 2, 3]);
+duplicate_each_element ([1, 2, 3]
+		       );
 duplicate_each_element(explode("hello"));
+
+
+(* compute the length of a list *)
+fun list_length(L) =
+    if L = nil then 0 else 1 + list_length(tl(L));
+
+list_length(explode("hello"));
+
+
+print("OMG\n");
+
+fun elevate_to_exponent(x: real, i:int) : real =
+    if i = 0 then 1.0
+    else x * elevate_to_exponent(x, i-1);
+
+elevate_to_exponent(2.0, 3);
+elevate_to_exponent(3.0, 2);
+elevate_to_exponent(3.3, 3);
+elevate_to_exponent(3.0, 3);
+
+
+fun get_largest(L: real list
+	       ): real =
+
+    
+    if length
+	   (L) = 1 then hd(L) else
+    if hd(L) > hd(tl(L)) then get_largest([hd(L)] @ tl(tl(L))) else get_largest(tl(L))
+;
+
+get_largest([1.0, 1.1, 1.0, 3.04, 6.0, 4.0]);
+get_largest([10.0, 1.0, 1.0, 2.1]);
+
+
+fun merge (nil, M)  = M
+  | merge  (L, nil)  = L
+  | merge  (L as x::xs, M as y::
+			ys) =
+    if x<y then x::merge(xs, M) else
+    y::merge(L, ys);
+
+
+merge([1, 3, 5], [2, 4, 6]);
+
+fun factorial2(1) = 1
+  | factorial2(x) = x * factorial(x-1);
+
+factorial2(4);
+factorial2(5);
+
+
+fun cycle_liste_once2(nil) = nil
+  | cycle_liste_once2 (L)  = tl(L) @
+			     [hd(L
+			     )];
+cycle_liste_once2([1, 2, 3, 4]);
+
+
+fun cycle_l_i_times_2(0, L) = L
+  | cycle_l_i_times_2 (i, L)  = cycle_l_i_times_2(i-1, tl(L) @ [hd(L)
+			]);
+cycle_l_i_times_2
+    
+    (3, [1, 2, 3, 4, 5, 6, 7]);
+
+
+fun elevate_to_exponent_2(x: real, 0) : real = 1.0
+  | elevate_to_exponent_2 (x, i)  =  x * elevate_to_exponent_2(x, i-1);
+
+
+elevate_to_exponent_2(2.0, 4);
+elevate_to_exponent_2(10.0, 0);
+
+
+fun get_max_list([x:real
+		]) = x
+  | get_max_list(x::y::zs) = if x<y then get_max_list(y::zs) else get_max_list(x::zs);
+get_max_list([4.0, 3.0, 1.0, 10.1, 4.1]);
+
+
+
+fun flip_elements_list(x::y::zs) =
+    y::x::flip_elements_list(zs)
+  | flip_elements_list (x::nil) = [x]
+  | flip_elements_list (nil) = nil;
+
+
+
+flip_elements_list([1, 2, 3, 4, 5, 6, 7, 8]);
+flip_elements_list([1, 2, 3, 4, 5, 6, 7]);
+
+
+fun delete_ith_element(x::xs, 1) = xs
+  | delete_ith_element (x::xs, i) = x::delete_ith_element(xs, i-1)
+  | delete_ith_element (nil, _) = nil;
+
+delete_ith_element([1, 2, 3, 4, 5], 3);
+delete_ith_element([1, 2, 3, 4, 5], 1);
+delete_ith_element([1, 2, 3, 4, 5], 6);
+
+fun n_square(0) = 0
+  | n_square (n)  = n_square(n-1) + 2*n - 1;
+
+
+n_square(2);
+n_square(5);
+n_square(10);
+
+
+						       
+print ("END OF FILE\n");
