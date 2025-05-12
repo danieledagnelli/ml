@@ -329,5 +329,88 @@ n_square(5);
 n_square(10);
 
 
-						       
+fun order_list_pairs((pair as (x:int,y:int)
+		     ) ::xs) =
+    if x<y then pair::order_list_pairs(xs) else (y,x)::order_list_pairs(xs)
+  | order_list_pairs nil = nil;
+
+order_list_pairs([(1, 3), (8, 2), (4,4), (9, 1)]);
+
+fun is_first_letter_vowel(#"a"::_)  = true
+  | is_first_letter_vowel (#"e"::_)  = true
+  | is_first_letter_vowel (#"i"::_)  = true
+  | is_first_letter_vowel (#"o"::_) = true
+  | is_first_letter_vowel (#"u"::_
+			  ) = true
+  | is_first_letter_vowel (_)  = false;
+(*not working with capitals but ok*)
+is_first_letter_vowel(explode("ciao"));
+is_first_letter_vowel(explode("acqua"));
+
+
+fun to_pig_latin(s
+		 : string) =
+    if is_first_letter_vowel(explode(s)) then s^"yay" else
+    to_pig_latin(implode(tl(explode(s))) ^ str(hd(explode(s))))
+; (* not fully working - always yay vs yay on consonants *)
+to_pig_latin("able");
+to_pig_latin("stripe");
+
+(* returns true if the element x is a member of set S, represented as a list *)
+fun member (_, nil)=
+    false
+  | member
+	(x, S) =
+    if x=hd(S) then true else member(x, tl(S));
+
+
+member(1, [1, 2, 3]);
+member(2, [1,2,3]);
+member(3, [1,2,3]);
+member(4, [1,2,3]);
+
+
+fun delete(x, nil) = nil
+  | delete (x, y::ys) = if x=y then ys else y :: delete(x, ys);
+
+print("DELETE\n");
+delete(1, [1, 2, 3]);
+delete(2, [1,2,3]);
+delete(3, [1,2,3]);
+delete(4, [1,2,3]);
+
+
+print("INSERT\n");
+fun insert(x, S) = if member(x, S) then S else x::S;
+
+insert(1, [1, 2, 3]);
+insert(4, [1, 2, 3]);
+insert(3, [1, 2, 3]);
+
+
+print("insert onto list\n");
+(* insert onto each element of the list of list *)
+fun insert_element_in_list_of_list(a, (H as (x::xs))::(T as (z::zs))) =
+    (a::H)::insert_element_in_list_of_list(a, T)
+  | insert_element_in_list_of_list (a, _) = [[a]];
+
+
+insert_element_in_list_of_list(1, [[2]]);
+insert_element_in_list_of_list(1, [[2, 3], [4, 5, 6], nil]);
+
+print("POWER SET\n");
+
+fun power_set(nil) = [nil]
+  | power_set (S) = power_set(tl(S));
+
+
+
+    
+power_set([1, 2]);
+
+		      
+
+
+
+
 print ("END OF FILE\n");
