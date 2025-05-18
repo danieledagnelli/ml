@@ -390,9 +390,9 @@ insert(3, [1, 2, 3]);
 
 print("insert onto list\n");
 (* insert onto each element of the list of list *)
-fun insert_element_in_list_of_list(a, (H as (x::xs))::(T as (z::zs))) =
-    (a::H)::insert_element_in_list_of_list(a, T)
-  | insert_element_in_list_of_list (a, _) = [[a]];
+fun insert_element_in_list_of_list (a, []) = []
+  | insert_element_in_list_of_list (a, x::xs) =
+      (a::x) :: insert_element_in_list_of_list (a, xs);
 
 
 insert_element_in_list_of_list(1, [[2]]);
@@ -400,15 +400,179 @@ insert_element_in_list_of_list(1, [[2, 3], [4, 5, 6], nil]);
 
 print("POWER SET\n");
 
-fun power_set(nil) = [nil]
-  | power_set (S) = power_set(tl(S));
-
-
-
+fun power_set([]) = [[]]
+  | power_set (x::xs) = power_set(xs) @ insert_element_in_list_of_list(x, power_set(xs));
     
 power_set([1, 2]);
+power_set([1,2,3]);
 
-		      
+
+
+
+
+(* compute product pairs *)
+fun
+real_diff_product ([]) = 1.0
+      | real_diff_product(l: real list): real =
+    prod_aux(hd(l), tl(l)) * real_diff_product(tl(l))
+
+				 
+and prod_aux(b, []) = 1.0
+| prod_aux (b, x::xs) = (b-x) * prod_aux(b, xs);
+
+(* compute product of a - list_i) *)
+prod_aux(4.0, [1.0, 2.0, 3.0]); (* 4-1=3 * 4-2=2 * 4-3=1 -> 3*)
+real_diff_product([1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]);
+
+
+fun is_empty_list ([]) = true
+  | is_empty_list (x::xs) = false;
+
+is_empty_list([1]);
+is_empty_list([1, 2,3]);
+is_empty_list([]);
+
+
+print ("3.4 LOCAL ENVIRONMENT USING LET\n");
+
+fun hundrethPower(x:real) =
+    let
+	val four = x*x*x*x;
+	val twenty = four*four*four*four*four;
+    in
+	twenty*twenty*twenty*twenty*twenty
+    end;
+
+hundrethPower(2.0);
+hundrethPower(1.01);
+
+
+fun hundredthPower(x: real)  =
+    let
+	val x = x*x*x*x;
+	val x = x*x*x*x*x
+    in
+	x*x*x*x*x
+    end;
+
+
+hundredthPower(2.0);
+
+
+fun split(nil) = (nil, nil)
+  | split ([a]) = ([a], nil)
+  | split (a::b::cs) =
+    let
+	val (M, N) = split(cs)
+    in
+	(a::M, b::N)
+    end;
+
+
+split([1,2,3,4,5,6]);
+
+
+
+fun mergeSort([]) = []
+  | mergeSort ([a]) = [a]
+  | mergeSort (L as x::xs) =
+    let
+	val (M, N) = split (L);
+	val M = mergeSort(M);
+	val N = mergeSort(N);
+    in
+	merge(M, N)
+    end;
+
+mergeSort([1, 5, 2, 4, 3]);
+
+
+print("EXERCISES FOR SECTION 3.4\n");
+fun x_1000th(x: real) =
+    let
+	val x = x*x*x*x*x; (* x^5 *)
+	val x = x*x*x*x*x; (* x^25*)
+	val x = x*x*x*x; (*x^100*)
+	val x = x*x*x*x (*x^500*)
+    in
+	x*x (*x^1000 *)
+    end;
+
+
+x_1000th(2.0);
+
+
+print("IMPROVED PSET\n");
+fun improved_power_set([]) = [[]]
+  | improved_power_set (x::xs) =
+    let
+	val tail_pset = improved_power_set(xs)
+    in
+	tail_pset @ insert_element_in_list_of_list(x, tail_pset)
+    end;
+    
+improved_power_set([1, 2]);
+improved_power_set([1,2,3]);
+
+
+print ("Maximum of a list of reals\n");
+fun max_reals ([x] : real list): real = x
+  | max_reals (x::xs: real list): real =
+    let
+	val mtail = max_reals(xs)
+    in
+	if x<mtail then mtail else x
+    end;
+
+max_reals([1.0, 5.0, 4.0, 3.0, 5.5, 3.0]);
+
+
+
+print ("COMPUTE x^(2^i))\n");
+fun compute_x_to_2_to_i (x, 0) = x
+  | compute_x_to_2_to_i (x: real, i: int): real =
+    compute_x_to_2_to_i(x*x, i-1);
+compute_x_to_2_to_i(2.0, 3);
+
+
+print ("SUMPAIRS 2\n");
+fun sum_pair_318(nil) = 0
+  | sum_pair_318 ((x, y)::zs) = x+y+sum_pair_318(zs);
+
+sum_pair_318([(1, 2), (2, 3), (4, 5)]);
+
+
+fun sum_pairs_components(nil) = (0,0)
+  | sum_pairs_components ((x, y)::nil)  = (x, y)
+  | sum_pairs_components ((x, y)::(w, k)::zs) = sum_pairs_components((x+w, y+k)::zs);
+
+sum_pairs_components([(1, 2), (2, 3), (4, 5)]);
+
+
+
+fun sum_even_odds (a::b::nil) = (a, b)
+  | sum_even_odds (a::b::c::nil) = (a+c, b)
+  | sum_even_odds (a::nil) = (a, 0)
+  | sum_even_odds (nil) = (0,0)
+  | sum_even_odds (a::b::cs) = sum_even_odds(a+hd(cs)::b+hd(tl(cs))::tl(tl(cs)));
+
+sum_even_odds([1, 2, 3, 4, 5, 6, 7]);
+sum_even_odds([1, 2, 3, 4, 5, 6]);
+sum_even_odds([1, 2, 3]);
+sum_even_odds([]);
+sum_even_odds([1]);
+sum_even_odds([1,2]);
+
+print("DIFFERENCE LIST\n");
+fun rev1(nil, M) = M
+  | rev1(x::xs, ys) = rev1(xs, x::ys);
+
+fun reverse(L) = rev1(L, nil);
+
+
+reverse([1, 2,3, 4]);
+
+print("EXERCISES 3.5\n");
 
 
 
